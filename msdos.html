@@ -11,20 +11,21 @@
     <div class="w-auto h-screen" id="dosbox"></div>
     <script type="text/javascript" src="https://js-dos.com/cdn/js-dos-api.js"></script>
     <script type="text/javascript">
-    const queryString = window.location.search;
-    const urlParams = new URLSearchParams(queryString);
-    const package = urlParams.get('package')
+            const queryString = window.location.search;
+            const urlParams = new URLSearchParams(queryString);
+            const package = urlParams.get('package')
+            const file = urlParams.get('file')
 
 
-    var dosbox = new Dosbox({
+      var dosbox = new Dosbox({
         id: "dosbox",
         onload: function (dosbox) {
-          dosbox.run(`./files/${package.split("-")[0]}`, `./${package.split("-")[1]}`);
+          dosbox.run(`./files/${package}`, file);
         },
         onrun: function (dosbox, app) {
           console.log("App '" + app + "' is runned");
         }
-    });
+      });
     </script>
   </body>
 </html>

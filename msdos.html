@@ -4,11 +4,23 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <title>js-dos api</title>
     <style type="text/css">
-      .dosbox-container { width: 100%; height: 100%; }
+      .dosbox-container { width: 640px; height: 400px; }
+
+        body{
+            overflow: hidden;
+        }
+
+      .center-screen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 100vh;
+}
     </style>
   </head>
   <body>
-    <div class="w-auto h-screen" id="dosbox"></div>
+    <div class="center-screen" id="dosbox"></div>
     <script type="text/javascript" src="https://js-dos.com/cdn/js-dos-api.js"></script>
     <script type="text/javascript">
             const queryString = window.location.search;
@@ -26,6 +38,15 @@
           console.log("App '" + app + "' is runned");
         }
       });
+
+      setTimeout(() => {
+        document.body.style.zoom = "200%";
+        document.body.scrollIntoView({
+            behavior: 'auto',
+            block: 'center',
+            inline: 'center'
+        });
+      }, 500);
     </script>
   </body>
 </html>

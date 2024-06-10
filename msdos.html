@@ -4,26 +4,28 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <title>js-dos api</title>
     <style type="text/css">
-      .dosbox-container { width: 640px; height: 400px; }
-      .dosbox-container > .dosbox-overlay { background: url(https://js-dos.com/cdn/digger.png); }
+      .dosbox-container { width: 100%; height: 100%; }
     </style>
   </head>
   <body>
-    <div id="dosbox"></div>
-    <br/>
-    <button onclick="dosbox.requestFullScreen();">Make fullscreen</button>
-    
+    <div class="w-auto h-screen" id="dosbox"></div>
     <script type="text/javascript" src="https://js-dos.com/cdn/js-dos-api.js"></script>
     <script type="text/javascript">
-      var dosbox = new Dosbox({
+    const queryString = window.location.search;
+    const urlParams = new URLSearchParams(queryString);
+    const package = urlParams.get('package')
+    const file = urlParams.get('file')
+
+
+    var dosbox = new Dosbox({
         id: "dosbox",
         onload: function (dosbox) {
-          dosbox.run("http://127.0.0.1:5500/files/doom.zip", "./DOOM.EXE");
+          dosbox.run(`./files/${package}`, file);
         },
         onrun: function (dosbox, app) {
           console.log("App '" + app + "' is runned");
         }
-      });
+    });
     </script>
   </body>
 </html>

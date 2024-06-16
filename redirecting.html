@@ -1,0 +1,217 @@
+<html lang="en">
+<head><meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com/"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.js" integrity="sha512-bUju8VkXhCQgW7zCHSdiIDpECo/lqzChkKrKoc1v2PL2XqO/0Q2Y8dhu07+q6Rk+1c1xr6cfE0VZnumgwy93Ig==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
+    <style>
+      ::-moz-selection { /* Code for Firefox */
+      color: #2c2c2c;
+      background: #52ae97;
+    }
+    
+    ::selection {
+      color: #2c2c2c;
+      background: #52ae97;
+    }
+    </style>
+    
+    <script>
+        tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            coolbeans:{"50":"#52ae97"},
+            primary: {"50":"#f0fdfa","100":"#ccfbf1","200":"#99f6e4","300":"#5eead4","400":"#2dd4bf","500":"#14b8a6","600":"#0d9488","700":"#0f766e","800":"#115e59","900":"#134e4a","950":"#042f2e"}
+          }
+        },
+        fontFamily: {
+          'body': [
+        'Montserrat', 
+        'ui-sans-serif', 
+        'system-ui', 
+        '-apple-system', 
+        'system-ui', 
+        'Segoe UI', 
+        'Roboto', 
+        'Helvetica Neue', 
+        'Arial', 
+        'Noto Sans', 
+        'sans-serif', 
+        'Apple Color Emoji', 
+        'Segoe UI Emoji', 
+        'Segoe UI Symbol', 
+        'Noto Color Emoji'
+      ],
+          'sans': [
+        'Montserrat', 
+        'ui-sans-serif', 
+        'system-ui', 
+        '-apple-system', 
+        'system-ui', 
+        'Segoe UI', 
+        'Roboto', 
+        'Helvetica Neue', 
+        'Arial', 
+        'Noto Sans', 
+        'sans-serif', 
+        'Apple Color Emoji', 
+        'Segoe UI Emoji', 
+        'Segoe UI Symbol', 
+        'Noto Color Emoji'
+      ]
+        }
+      }
+    }
+    </script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/2.3.0/alpine-ie11.js" integrity="sha512-6m6AtgVSg7JzStQBuIpqoVuGPVSAK5Sp/ti6ySu6AjRDa1pX8mIl1TwP9QmKXU+4Mhq/73SzOk6mbNvyj9MPzQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="shortcut icon" href="https://jimi.wtf/cdn/?file=logo.png" type="image/x-icon">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://jimi.wtf/api/script/?file=redirects.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.cdnfonts.com/css/hey-comic" rel="stylesheet">
+    <style>
+        .titleFont{
+          font-family: 'Hey Comic', sans-serif;
+        }
+    
+        body{
+          background-color: #fafafa;
+        }
+    
+        .bg{
+          background-color: #fafafa;
+        }
+    
+        .horizontal{
+            display: table;
+             margin: 0 auto;
+             text-align: center;
+        }
+    
+        .higlight{
+            color:#52ae97
+        }
+    
+        .notselect{
+            -moz-user-select: none;
+            -webkit-user-select: none;
+            user-select: none;
+        }
+    
+        .normalfont{
+          font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+    <title>jimi.wtf</title>
+</head>
+<style>
+@keyframes pulse {
+                0% {
+                    transform: scale(1);
+                }
+                50% {
+                    transform: scale(1.3);
+                }
+                100% {
+                    transform: scale(1);
+                }
+            }
+ 
+            .pulse {
+                width: 100px;
+                height: 100px;
+                animation: pulse 2s infinite;
+            }
+
+    .center-screen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 100vh;
+}
+    body,
+html {
+  background-color: #0c0c0c;
+  font-family: 'Montserrat', monospace;
+color:white }
+
+.section {
+  padding: 2rem; }
+  @media screen and (min-width: 768px) {
+    .section {
+      padding: 4rem; } }
+
+h1 {
+  font-size: 1.8rem;
+  margin: 0 0 1.5em;
+  font-weight: normal; }
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 35px;
+  grid-row-gap: 25px;
+  grid-auto-rows: 350px;
+  grid-auto-flow: row dense; }
+
+.card {
+  border-radius: 10px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  box-sizing: border-box;
+  background: #c4c4c4;
+  color: #fff;
+  grid-column-start: auto;
+  grid-row-start: auto;
+  color: #fff;
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.12);
+  transition: box-shadow .3s ease-out, transform .3s ease-out;
+  transition-delay: .1s; }
+  .card:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0.3;
+    transition: opacity 0.3s ease-in-out;
+    border-radius: 10px; }
+  .card:hover {
+    box-shadow: rgba(45, 45, 45, 0.05) 0px 2px 2px, rgba(49, 49, 49, 0.05) 0px 4px 4px, rgba(42, 42, 42, 0.05) 0px 8px 8px, rgba(32, 32, 32, 0.05) 0px 16px 16px, rgba(49, 49, 49, 0.05) 0px 32px 32px, rgba(35, 35, 35, 0.05) 0px 64px 64px;
+    transform: translate(0, -0.4rem); }
+    .card:hover:after {
+      opacity: 0; }
+  .card__details {
+    position: relative;
+    z-index: 1;
+    padding: 15px;
+    background: #fff;
+    color: #393939;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px; }
+
+</style>
+<body class="">
+    <div class="center-screen">
+        <img src="https://jimi.wtf/cdn/?file=bannerlight.png" class="w-auto h-24 pulse"> 
+    </div>
+</body>
+<script>
+    const queryString = window.location.search;
+    const urlParams = new URLSearchParams(queryString);
+    var url = urlParams.get('url')
+
+    setTimeout(() => {
+        window.location.href = (url.replace(/"/g, "").replace(/----imp----/g, "&"))
+    }, 3000);
+</script>
+</html>
